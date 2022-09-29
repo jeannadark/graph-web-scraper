@@ -1,0 +1,28 @@
+{% extends "base/base.html" %}
+
+{% block title %}Guidelines{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+
+     <div class="blog-post">
+                <h2 class="blog-post-title">Guidelines</h2>
+            <ol>
+                <li>Login/Register</li>
+                <li>Click <strong>Domains</strong> button(there are three of them but only domains one is necessary which is blue colored)</li>
+                <li>Fill the fields</li>
+                    <ol>
+                        <li><i>About</i> - briefly indicate what the domain is about</li>
+                        <li><i>Category</i> - select 1 or 2 options from the list. Help text below will help you to select more than 1 item.</li>
+                        <li><i>Url</i> - for this one click <strong>plus sign</strong> and insert the url and then click <strong>save</strong>. If <strong>domain</strong> already <strong>exist</strong>, or the <strong>url scheme is not correct</strong>, or domain does not exist, there will be error message indicating the issue. <br><br><strong>***Domain existence validation can take some time</strong> please be patient, if it takes too much close the pop up window and try again.</li><br>
+                        <li><i>Subdomains</i> - for this one click <strong>plus sign</strong> and insert the url and then click save. See help text below for the syntax.</li>
+                        <li><i>Languages</i> - select 1 or 2 options from the list. Help text below will help you to select more than 1 item.</li>
+                    </ol>
+                <li>Click <strong>save</strong> and in case of successful submission, a <strong>success message</strong> will be popped out otherwise, an <strong>error message</strong> indicating the problem.</li>
+            </ol>
+     </div><!-- /.blog-post -->
+
+    <a href="{% url 'admin:login' %}" class="btn btn-primary">Back</a>
+</div>
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "base/base.html" %}
+
+{% block title %}Create an Account{% endblock %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <form method="POST" style="margin: 75px;" class="form-group">
+	{% csrf_token %}
+	{{ form|crispy }}
+    <a href="{% url 'admin:login' %}" class="btn btn-danger">Cancel</a>
+	<button type="submit" class="btn btn-success">Register</button>
+    </form>
+{% endblock %}
